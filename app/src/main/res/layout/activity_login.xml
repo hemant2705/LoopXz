@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/logoWidth"
+            android:layout_height="@dimen/logoWidth"
+            android:elevation="2dp"
+            android:src="@drawable/loopxblack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/welcomeTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/wlcmtoloopx"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondaryTxtSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+            <EditText
+                android:id="@+id/mobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:layout_marginStart="@dimen/editTextBoxMarginTop"
+                android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+                android:background="@drawable/edit_text_border"
+                android:drawableStart="@drawable/ic_mob"
+                android:paddingStart="@dimen/drawablepadding"
+                android:drawablePadding="@dimen/drawablepadding"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcomeTxt"
+
+                android:drawableLeft="@drawable/ic_mob"
+                android:paddingLeft="@dimen/drawablepadding" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:background="@drawable/edit_text_border"
+                android:layout_marginStart="@dimen/editTextBoxMarginTop"
+                android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+                android:drawableStart="@drawable/ic_password"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:paddingStart="@dimen/drawablepadding"
+                android:drawablePadding="@dimen/drawablepadding"                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mobileNumber"
+                android:drawableLeft="@drawable/ic_password"
+                android:paddingLeft="@dimen/drawablepadding" />
+
+
+        <TextView
+            android:id="@+id/forgetPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/editTextBoxMarginTop"
+            android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+            android:layout_marginTop="@dimen/editTextBoxMarginTop"
+            android:gravity="end"
+            android:text="@string/forgetPassword"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondaryTxtSize"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_marginStart="@dimen/editTextBoxMarginTop"
+            android:layout_marginTop="@dimen/editTextBoxMarginTop"
+            android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+            android:background="@drawable/edit_text_backgroud"
+            android:gravity="center"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:textSize="@dimen/secondaryTxtSize"
+            android:textColor="@color/black"
+            android:paddingEnd="@dimen/paddingStart"
+            android:paddingStart="@dimen/paddingStart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/forgetPassword" />
+
+        <TextView
+            android:id="@+id/notRegistered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/editTextBoxMarginTop"
+            android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+            android:layout_marginTop="@dimen/editTextBoxMarginTop"
+            android:gravity="center"
+            android:text="@string/notRegistered"
+            android:textColor="@color/white"
+            android:textSize="@dimen/secondaryTxtSize"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/loginBtn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/signUp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_marginStart="@dimen/editTextBoxMarginTop"
+            android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+            android:layout_marginTop="@dimen/btnMarginTop"
+            android:background="@drawable/edit_text_backgroud"
+            android:gravity="center"
+            android:text="@string/signUp"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/secondaryTxtSize"
+            android:paddingEnd="@dimen/paddingStart"
+            android:paddingStart="@dimen/paddingStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notRegistered"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

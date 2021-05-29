@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        layout="@layout/common_header"
+        android:id="@+id/header"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/header">
+            <TextView
+                android:id="@+id/add_transaction_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginTop"
+                android:textSize="@dimen/secondaryTxtSize"
+                android:textColor="@color/white"
+                android:text="Enter Transation Details"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginStart="@dimen/editTextBoxMarginTop"
+                android:layout_marginTop="@dimen/marginTop"
+                android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+                android:background="@drawable/edit_text_border"
+                android:hint="Enter Customer Name"
+                android:inputType="text"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/add_transaction_details" />
+
+            <EditText
+                android:id="@+id/customer_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginStart="@dimen/editTextBoxMarginTop"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+                android:background="@drawable/edit_text_border"
+                android:hint="Enter Customer Mobile No"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customer_name" />
+
+            <EditText
+                android:id="@+id/amount_paid"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginStart="@dimen/editTextBoxMarginTop"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:background="@drawable/edit_text_border"
+                android:hint="Amount Paid"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customer_mobile"
+                android:layout_marginLeft="@dimen/editTextBoxMarginTop" />
+
+            <EditText
+                android:id="@+id/amount_unpaid"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:layout_marginStart="@dimen/marginTop"
+                android:background="@drawable/edit_text_border"
+                android:hint="Amount Unpaid"
+                android:inputType="number"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintStart_toEndOf="@id/amount_paid"
+                app:layout_constraintTop_toBottomOf="@id/customer_mobile"
+                android:layout_marginLeft="@dimen/marginTop" />
+            <Spinner
+                android:id="@+id/emp_code"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:layout_marginLeft="@dimen/editTextBoxMarginTop"
+                android:padding="15dp"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/amount_paid"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="HardcodedText" />
+            <Spinner
+                android:id="@+id/service_code"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/editTextHeight"
+                android:layout_marginTop="@dimen/editTextBoxMarginTop"
+                android:layout_marginLeft="@dimen/editTextBoxMarginTop"
+                android:padding="15dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/amount_paid"
+                app:layout_constraintStart_toEndOf="@id/emp_code" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btnHeight"
+                android:layout_marginStart="@dimen/editTextBoxMarginTop"
+                android:layout_marginTop="@dimen/marginTop"
+                android:layout_marginEnd="@dimen/editTextBoxMarginTop"
+                android:background="@drawable/edit_text_backgroud"
+                android:gravity="center"
+                android:paddingStart="@dimen/paddingStart"
+                android:paddingEnd="@dimen/paddingStart"
+                android:text="Submit"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/secondaryTxtSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/service_code"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

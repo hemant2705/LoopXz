@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">LoopX</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="wlcmtoloopx">Welcome to LoopX</string>
+    <string name="phone">Phone No</string>
+    <string name="password">Password</string>
+    <string name="forgetPassword"><i>Forget Password??</i></string>
+    <string name="login">login</string>
+    <string name="notRegistered">Not Registered Yet??</string>
+    <string name="signUp">Sign UP</string>
+    <string name="shopName">Shop Name</string>
+    <string name="shopAddress">Shop Address</string>
+    <string name="ownerName">Owner Name</string>
+    <string name="ownerMobile">Owner Mobile</string>
+    <string name="ownerEmail">Owner email(Optional)</string>
+    <string name="alreadyAccount">Already Account??</string>
+    <string name="signIn"><i>Sign-In</i></string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="title_transaction">Transaction</string>
+    <string name="title_earning">Earning</string>
+    <string name="title_profile">Profile</string>
+    <string name="my_services">MY SERVICES</string>
+    <string name="my_employee">MY EMPLOYEE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>
